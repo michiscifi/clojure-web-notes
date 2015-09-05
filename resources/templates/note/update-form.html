@@ -1,0 +1,11 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<form method="post" action="/note/update">
+    {{tokenfield|raw}}
+    <input type="hidden" name="uuid" value="{{note.uuid}}">
+    <textarea name="content">{{note.content}}</textarea>
+    <br/>
+    <input type="submit"/>
+</form>
+{% endblock %}

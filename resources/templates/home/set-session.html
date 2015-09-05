@@ -1,0 +1,11 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<p>set session</p>
+
+<p>Session wert farbe: {{farbe}}</p>
+
+<form action="set-session" method="post">
+    <input type="text" name="farbe" />
+</form>
+{% endblock %}

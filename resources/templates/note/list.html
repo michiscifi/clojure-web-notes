@@ -1,0 +1,13 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<ul>
+    {% for note in notes %}
+    <li>
+        <a href="/note/read/{{ note.uuid }}">
+            {{ note.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

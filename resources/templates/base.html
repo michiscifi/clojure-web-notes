@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+{% block header %}
+<p>
+    Notebook
+</p>
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <a href="/">[home]</a>
+    |
+    <a href="/note/create-form">[create]</a>
+    |
+    <form style="display: inline" action="/note/search">
+        <input type="text" name="term" />
+    </form>
+</nav>
+{% endblock %}
+
+<hr />
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+<form method="post" action="/note/create">
+    {{tokenfield|raw}}
+    <textarea name="content"></textarea>
+    <br/>
+    <input type="submit"/>
+</form>
+{% endblock %}

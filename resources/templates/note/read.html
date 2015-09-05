@@ -1,0 +1,19 @@
+{% extends "templates/base.html" %}
+
+{% block nav %}
+{{block.super}}
+<p>
+    <a href="/note/update-form/{{note.uuid}}">Edit</a>
+    <a href="/note/delete/{{note.uuid}}">Delete</a>
+</p>
+{% endblock %}
+
+
+{% block content %}
+<p>
+    {{note.uuid}}
+</p>
+<pre style="white-space: pre-wrap;">
+    {{note.content}}
+</pre>
+{% endblock %}
